@@ -2,47 +2,47 @@ package com.sudarsanudash.hamrobazarreplica.Model;
 
 public class Products {
 
-    private String name;
-    private String price;
-    private int imageId;
-    private String used;
+    private String productName;
+    private String productPrice;
+    private String productType;
+    private String image;
 
-    public Products(String name, String price, int imageId, String used) {
-        this.name = name;
-        this.price = price;
-        this.imageId = imageId;
-        this.used = used;
+    public Products(String productName, String productPrice, String productType, String image) {
+        this.productName = productName;
+        this.productPrice = productPrice;
+        this.productType = productType;
+        this.image = image;
     }
 
-    public String getName() {
-        return name;
+    public String getProductName() {
+        return productName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
-    public String getPrice() {
-        return price;
+    public String getProductPrice() {
+        return productPrice;
     }
 
-    public void setPrice(String price) {
-        this.price = price;
+    public void setProductPrice(String productPrice) {
+        this.productPrice = productPrice;
     }
 
-    public int getImageId() {
-        return imageId;
+    public String getProductType() {
+        return productType;
     }
 
-    public void setImageId(int imageId) {
-        this.imageId = imageId;
+    public void setProductType(String productType) {
+        this.productType = productType;
     }
 
-    public String getUsed() {
-        return used;
+    public String getImage() {
+        return image;
     }
 
-    public void setUsed(String used) {
-        this.used = used;
+    public void setImage(String image) {
+        this.image = image;
     }
-}
+    }
