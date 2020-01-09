@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-            Intent intent=new Intent(MainActivity.this,HamroBazarSplashScreen.class);
+            Intent intent=new Intent(MainActivity.this,SplashScreen.class);
             startActivity(intent);
 
         }

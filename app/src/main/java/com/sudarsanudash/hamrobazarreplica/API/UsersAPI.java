@@ -1,33 +1,42 @@
 package com.sudarsanudash.hamrobazarreplica.API;
 
-import com.sudarsanudash.hamrobazarreplica.Url.Url;
+import com.sudarsanudash.hamrobazarreplica.Model.Products;
+import com.sudarsanudash.hamrobazarreplica.Model.User;
+import com.sudarsanudash.hamrobazarreplica.ServerResponse.ImageResponse;
+import com.sudarsanudash.hamrobazarreplica.ServerResponse.RegisterResponse;
 
-import java.io.IOException;
+import java.util.List;
 
+import okhttp3.MultipartBody;
 import retrofit2.Call;
-import retrofit2.Response;
+import retrofit2.http.Body;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
+import retrofit2.http.Header;
+import retrofit2.http.Multipart;
+import retrofit2.http.POST;
+import retrofit2.http.Part;
 
-public class UsersAPI {
+public interface UsersAPI {
+    @POST("users/register")
+    Call<RegisterResponse> registerUser(@Body User users);
 
-    boolean isSuccess=false;
-    public boolean checkUser(String email,String password){
-        UsersAPI usersAPI= Url.getInstance().create(UsersAPI.class);
+    @FormUrlEncoded
+    @POST("users/login")
+    Call<RegisterResponse> checkUser(@Field("email") String email, @Field("password") String password);
 
-        Call<RegisterResponse> usersCall=usersAPI.checkUser(email,password);
 
-        try {
-            Response<RegisterResponse> loginResponse=usersCall.execute();
-            if (loginResponse.isSuccessful() && loginResponse.body().getStatus().equals("Login success!")){
 
-                Url.token += loginResponse.body().getToken();
+    @Multipart
+    @POST("upload")
+    Call<ImageResponse> uploadImage(@Part MultipartBody.Part img);
 
-                isSuccess=true;
-            }
+    @GET("products")
+    Call<List<Products>>getAllProducts();
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return isSuccess;
-    }
 
+    @GET("users/me")
+    Call<User> getUserDetails(@Header("Authorization") String token);
 }
+
