@@ -2,24 +2,26 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sudarsanudash.hamrobazarreplica">
 
-
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:requestLegacyExternalStorage="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".SplashScreen"></activity>
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".TermsandConditions.Terms"></activity>
+        <activity android:name=".TermsandConditions.Safety" />
+        <activity android:name=".TermsandConditions.Posting" />
+        <activity android:name=".SplashScreen" />
         <activity android:name=".RegisterActivity" />
         <activity
-            android:name=".DashboardActivity"
+            android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,7 +32,7 @@
         <activity android:name=".TermsandCondition.Posting" />
         <activity android:name=".TermsandCondition.Safety" />
         <activity android:name=".TermsandCondition.Terms" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".DashboardActivity" />
     </application>
 
 </manifest>
