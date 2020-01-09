@@ -23,12 +23,12 @@ public class SplashScreen extends AppCompatActivity {
                 String ad=sharedPreferences.getString("ad","");
 
                 if ((terms.equals("checked")) && (safety.equals("checked")) &&(ad.equals("checked"))){
-                    Intent intent=new Intent(SplashScreen.this,DashboardActivity.class);
+                    Intent intent=new Intent(SplashScreen.this,MainActivity.class);
                     startActivity(intent);
                     finish();
                 }
                 else {
-                    Intent intent=new Intent(SplashScreen.this,MainActivity.class);
+                    Intent intent=new Intent(SplashScreen.this,DashboardActivity.class);
                     startActivity(intent);
                     finish();
                 }
