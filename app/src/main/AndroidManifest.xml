@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.sudarsanudash.hamrobazarreplica">
+    package="com.Sudarsan.hamrobazar">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -15,24 +17,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".TermsandConditions.Terms"></activity>
-        <activity android:name=".TermsandConditions.Safety" />
-        <activity android:name=".TermsandConditions.Posting" />
-        <activity android:name=".SplashScreen" />
-        <activity android:name=".RegisterActivity" />
-        <activity
-            android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name="com.Sudarsan.hamrobazar.activities.SplashScreenActivity1"></activity>
+        <activity android:name="com.Sudarsan.hamrobazar.activities.RegisterActivity" />
+        <activity android:name="com.Sudarsan.hamrobazar.activities.ViewPagerActivity" />
+        <activity android:name="com.Sudarsan.hamrobazar.activities.LoginActivity" />
+        <activity android:name="com.Sudarsan.hamrobazar.activities.DashboardActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TermsandCondition.Posting" />
-        <activity android:name=".TermsandCondition.Safety" />
-        <activity android:name=".TermsandCondition.Terms" />
-        <activity android:name=".DashboardActivity" />
+        <activity android:name="com.Sudarsan.hamrobazar.termsandconditions.PostingActivity" />
+        <activity android:name="com.Sudarsan.hamrobazar.termsandconditions.SafetyActivity" />
+        <activity android:name="com.Sudarsan.hamrobazar.termsandconditions.TermsActivity" />
+        <activity android:name="com.Sudarsan.hamrobazar.activities.TermsAndConditionActivity" />
+        <activity android:name="com.Sudarsan.hamrobazar.activities.SplashScreenActivity">
+
+        </activity>
+        <activity android:name="com.Sudarsan.hamrobazar.activities.MainActivity" />
     </application>
 
 </manifest>
